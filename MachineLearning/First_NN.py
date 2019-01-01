@@ -17,6 +17,11 @@ for i in file_list:
         data = numpy.array(data.get('data'))
         CY.append(data.flatten())
 
+#save the one dimensional arrays
+numpy.save('CY.npy', CY)
+
+CY = numpy.load('CY.npy')
+
 #test prints for CY.mat files
 print(CY[0])
 
